@@ -1,0 +1,56 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: looking for install in {{ popeye_install_dir }}...
+  become: true
+  stat:
+    path: '{{ popeye_install_dir }}'
+  changed_when: false
+  register: popeye_binary
+- when: not popeye_binary.stat.exists
+  block:
+    - name: downloading {{ popeye_url }} to {{ popeye_tmp_archive }}
+      become: true
+      become_user: root
+      get_url:
+        url: '{{ popeye_url }}'
+        dest: '{{ popeye_tmp_archive }}'
+        checksum: '{{ popeye_checksum }}'
+        mode: 0644
+    - name: mkdir {{ popeye_install_dir }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ popeye_install_dir }}'
+        state: directory
+        mode: 0755
+    - name: unarchive {{ popeye_tmp_archive }} to {{ popeye_install_dir }}
+      become: true
+      become_user: root
+      unarchive:
+        remote_src: true
+        src: '{{ popeye_tmp_archive }}'
+        dest: '{{ popeye_install_dir }}'
+        creates: '{{ popeye_install_exe }}'
+  always:
+    - name: rm {{ popeye_tmp_archive }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ popeye_tmp_archive }}'
+        state: absent
+- name: linking {{ popeye_install_link }} to {{ popeye_install_exe }}
+  become: true
+  become_user: root
+  file:
+    src: '{{ popeye_install_exe }}'
+    dest: '{{ popeye_install_link }}'
+    state: link

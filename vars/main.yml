@@ -1,0 +1,11 @@
+---
+# vars file for popeye
+popeye_platform: '{{ popeye_os }}_{{ popeye_arch }}'
+popeye_name: popeye_{{ popeye_platform }}_{{ popeye_ver }}
+popeye_tmp_archive: /tmp/{{ popeye_name }}.{{ popeye_archive_type | default("tar.gz") }}
+popeye_url: '{{ popeye_mirror }}/v{{ popeye_ver }}/popeye_{{ popeye_platform }}.{{ popeye_archive_type | default("tar.gz") }}'
+popeye_checksum: '{{ popeye_checksums[popeye_ver][popeye_platform] }}'
+popeye_install_dir: '{{ popeye_parent_install_dir }}/{{ popeye_name }}'
+popeye_install_exe: '{{ popeye_install_dir }}/popeye'
+popeye_install_link: '{{ popeye_parent_install_dir }}/bin/popeye'
+
