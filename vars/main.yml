@@ -1,5 +1,7 @@
 ---
 # vars file for popeye
+popeye_os: '{{ ansible_system }}'
+popeye_arch: '{{ popeye_arch_map[ansible_architecture] }}'
 popeye_platform: '{{ popeye_os }}_{{ popeye_arch }}'
 popeye_name: popeye_{{ popeye_platform }}_{{ popeye_ver }}
 popeye_tmp_archive: /tmp/{{ popeye_name }}.{{ popeye_archive_type | default("tar.gz") }}
