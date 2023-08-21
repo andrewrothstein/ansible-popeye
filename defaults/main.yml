@@ -1,6 +1,6 @@
 ---
 # defaults file for popeye
-popeye_ver: 0.11.0
+popeye_ver: 0.11.1
 popeye_mirror: https://github.com/derailed/popeye/releases/download
 popeye_arch_map:
   x86_64: x86_64
@@ -95,3 +95,21 @@ popeye_checksums:
     Windows_arm64: sha256:cc67aa56e33f98cd9b67f8c89af3eb88d2c01d5394054e60f21245d00120d070
     # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Windows_x86_64.tar.gz
     Windows_x86_64: sha256:131986fb37dc787c9f8cef47d0c4ffa1273ef694b4c815ca3518e37194e784d9
+  # https://github.com/derailed/popeye/releases/download/v0.11.1/checksums.txt
+  '0.11.1':
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:ea34f161a4b49084f333ea3f5e73c26ac7cce398fc138f9a26c57462284aceec
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:80e7012d5b99ce3c0062fae2f2f2097019532565c091001ce933a6f954f4479b
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Linux_arm.tar.gz
+    Linux_arm: sha256:224427a2f11ce146d9c3f875252a8a87040ad7aeccfbf88dd082abdeb0a9ebf3
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Linux_arm64.tar.gz
+    Linux_arm64: sha256:b0d2932396df691ff61093f9af03bca6b70bf3dbcd86e5d8e4a555d1ac2a472f
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:d4471c3f5a3636ce9effc7e5c5d1ebeab44f11e828e4677e31a925cab90b66ae
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Windows_arm.tar.gz
+    Windows_arm: sha256:0a3cb38673e25180431a47cf016364a1ebb67a134f3349586b73b5e507101372
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Windows_arm64.tar.gz
+    Windows_arm64: sha256:2b280b26d15adece750e6d8e2176e2452f32badf750c93b4f89d4eec906ed9a9
+    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Windows_x86_64.tar.gz
+    Windows_x86_64: sha256:bd13f02fa4a6b7861baca7d38242e0a5d6b52a4073d5b4d6288db882f287f66b

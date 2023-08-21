@@ -10,4 +10,3 @@ popeye_checksum: '{{ popeye_checksums[popeye_ver][popeye_platform] }}'
 popeye_install_dir: '{{ popeye_parent_install_dir }}/{{ popeye_name }}'
 popeye_install_exe: '{{ popeye_install_dir }}/popeye'
 popeye_install_link: '{{ popeye_parent_install_dir }}/bin/popeye'
-
