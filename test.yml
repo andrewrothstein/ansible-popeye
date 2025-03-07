@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.popeye
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/popeye version
-    register: popeye_test_output
-  - name: popeye version
-    debug:
-      msg: '{{ popeye_test_output.stdout }}'
+    - name: Executing 'popeye --version'
+      ansible.builtin.command: popeye version
+      changed_when: false
+      register: popeye_test_output
+    - name: Output from 'popeye version'
+      ansible.builtin.debug:
+        msg: '{{ popeye_test_output.stdout }}'

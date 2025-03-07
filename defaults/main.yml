@@ -1,115 +1,25 @@
 ---
 # defaults file for popeye
-popeye_ver: 0.11.1
+popeye_ver: 0.22.1
 popeye_mirror: https://github.com/derailed/popeye/releases/download
 popeye_arch_map:
-  x86_64: x86_64
+  x86_64: amd64
   aarch64: arm64
   arm64: arm64
 popeye_parent_install_dir: /usr/local
 
 popeye_checksums:
-  # https://github.com/derailed/popeye/releases/download/v0.9.7/checksums.txt
-  '0.9.7':
-    # https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Darwin_arm64.tar.gz
-    Darwin_arm64: sha256:b90cc43ef2161ea99fc5242cfc4d28b5e770ded1b1dfcf98feacc4d3365ba21d
-    # https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Darwin_x86_64.tar.gz
-    Darwin_x86_64: sha256:ced19ec058f13a06fb072d8960757c4768bc4c1f4671b986195e538ff65642d2
-    # https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Linux_arm.tar.gz
-    Linux_arm: sha256:4e6a4ecf78c0341e9573eca4382d8475cc4f651919c57a6797e65e3e6dfb8b67
-    # https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Linux_arm64.tar.gz
-    Linux_arm64: sha256:021773468d7cdc0ef2f9ea343973e7a3d581505e1bc9c1a4014d0934cd7ac12c
-    # https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Linux_x86_64.tar.gz
-    Linux_x86_64: sha256:2506a776a62d70c948a4cf1f70bdbbad0c99fb7f6f0f9e0753f23c2e3bcbdb71
-    # https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Windows_x86_64.tar.gz
-    Windows_x86_64: sha256:de002b0f57d7e2adc4f2db5b83d509ed3fc4d409d8a1038d4832de62ed313a4c
-  # https://github.com/derailed/popeye/releases/download/v0.9.8/checksums.txt
-  '0.9.8':
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Darwin_arm64.tar.gz
-    Darwin_arm64: sha256:dc8856d9d05c79246317762412e44d6c34d847a7eaa8c1e182424cec38338b62
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Darwin_x86_64.tar.gz
-    Darwin_x86_64: sha256:0c7880aad5e0a1efbd833641ab9309a0e4d5b7725ef0510f40d7de61a658f76f
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_arm.tar.gz
-    Linux_arm: sha256:7200fdab29b6b20b1089673a585d3871faf30488878232c77f9590be8e8ea36a
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_arm64.tar.gz
-    Linux_arm64: sha256:a54e5da3bbf3b2216518476a340ffa322164f701ec23ca7fe17c21ccb5421241
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_x86_64.tar.gz
-    Linux_x86_64: sha256:b8407ab3b5c450e26f9323ff3bc42c8623f8f54e733dfd1c12b3fc8be06f58ba
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Windows_arm.tar.gz
-    Windows_arm: sha256:2156af28e20c95316ac5552c5ba86649bd2dfa89102c6baf6158a845ee967e5f
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Windows_arm64.tar.gz
-    Windows_arm64: sha256:a635c85539510390c3e58f8c2c810759be1812261b1a7f6864dd1c2cc51d852a
-    # https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Windows_x86_64.tar.gz
-    Windows_x86_64: sha256:23263914aff9b3bfb20969ca3da539d52e6fff457a90d495d12e3bd0e63425c5
-  # https://github.com/derailed/popeye/releases/download/v0.10.0/checksums.txt
-  '0.10.0':
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Darwin_arm64.tar.gz
-    Darwin_arm64: sha256:b1ae1eb41d306c3f2d1df78fc464f4bc10abcada11e82983ee1148b963b605e0
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Darwin_x86_64.tar.gz
-    Darwin_x86_64: sha256:c15ad3dd470ffe68fc260a04e319ee58a67a7472c1b96358822a2a0935cb7bc7
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Linux_arm.tar.gz
-    Linux_arm: sha256:5462c3a92bafe518bf5039d21f32a812f2c448598a60a80bc8ae0b19993ad9d3
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Linux_arm64.tar.gz
-    Linux_arm64: sha256:fc66d0b27ac338f778a2fdf3169cbfb56f03d2155a327183b66674448aca2769
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Linux_x86_64.tar.gz
-    Linux_x86_64: sha256:ba5078cd694870947e025dc377f0772441490c2a86d20220a8d541f1572af2c4
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Windows_arm.tar.gz
-    Windows_arm: sha256:7346cf4b413546b41cd18b63caf6789fb988e95270a03d65e102f1609aa7485f
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Windows_arm64.tar.gz
-    Windows_arm64: sha256:eac347dab491e41e0c307a5e5178463e984a5ba4ec144a07c7488e22c491e9eb
-    # https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Windows_x86_64.tar.gz
-    Windows_x86_64: sha256:cfecdcdd93ec70a6727d62411f3fd3408aadefae72f28d887bb4fe8f81f9c324
-  # https://github.com/derailed/popeye/releases/download/v0.10.1/checksums.txt
-  '0.10.1':
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Darwin_arm64.tar.gz
-    Darwin_arm64: sha256:e2c180d6a624fe36cec7e3ff88112a6afefbb0567778325dc6687227dfdc227f
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Darwin_x86_64.tar.gz
-    Darwin_x86_64: sha256:04002267b0b4e170140b4be7469d82a9bdaaf7c0ad1fef64ed899069a2927099
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Linux_arm.tar.gz
-    Linux_arm: sha256:4d6fc855b6722f7a13efa5d32fa57e53c276370d1987f9f99f758120dfee338c
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Linux_arm64.tar.gz
-    Linux_arm64: sha256:d7c3d16d71b96b2f8e8797b2ae29fca1ddd81e918c6a3fe836a807e80392dd7a
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Linux_x86_64.tar.gz
-    Linux_x86_64: sha256:a7d57a70de146b22e54b6c6e110930c19d98a920d55d32a1379db721f686f166
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Windows_arm.tar.gz
-    Windows_arm: sha256:690f37ead6df6feede921d1a01c633a414cae87e8cd82a3d21725b96c598cacb
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Windows_arm64.tar.gz
-    Windows_arm64: sha256:7b76e7b790297a1445f3a01f11110e5816276fe68efe18c324c9d48fce3609ec
-    # https://github.com/derailed/popeye/releases/download/v0.10.1/popeye_Windows_x86_64.tar.gz
-    Windows_x86_64: sha256:a0cbc13967b0e9531f372aa50682178dc7c5ef36554d9b50788052e6fdfe8085
-  # https://github.com/derailed/popeye/releases/download/v0.11.0/checksums.txt
-  '0.11.0':
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Darwin_arm64.tar.gz
-    Darwin_arm64: sha256:d2746abd32035ee3cd719d3d037c8113a810c5048368b718edca51169144e951
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Darwin_x86_64.tar.gz
-    Darwin_x86_64: sha256:c8d561045375d555e84dbdcf48b953659dada5f0fe8ee5a53a0a2313b29bab87
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Linux_arm.tar.gz
-    Linux_arm: sha256:81c7ada6ed756d684fb8a7c1ca05b18c15d6aa7d59201bd11edc6ae5411b98cb
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Linux_arm64.tar.gz
-    Linux_arm64: sha256:84f0b458bff44034406f70296071a3b65b1e4f53df8a8e1900f5dc24c54272a7
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Linux_x86_64.tar.gz
-    Linux_x86_64: sha256:f59a354cd2e4ab9f1de0d9f2b339713a53a8a7229d42b1858044fd557586564f
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Windows_arm.tar.gz
-    Windows_arm: sha256:33baac31d3168fac64b098b975de3e61da82395717ed66b5cd9c66b923956053
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Windows_arm64.tar.gz
-    Windows_arm64: sha256:cc67aa56e33f98cd9b67f8c89af3eb88d2c01d5394054e60f21245d00120d070
-    # https://github.com/derailed/popeye/releases/download/v0.11.0/popeye_Windows_x86_64.tar.gz
-    Windows_x86_64: sha256:131986fb37dc787c9f8cef47d0c4ffa1273ef694b4c815ca3518e37194e784d9
-  # https://github.com/derailed/popeye/releases/download/v0.11.1/checksums.txt
-  '0.11.1':
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Darwin_arm64.tar.gz
-    Darwin_arm64: sha256:ea34f161a4b49084f333ea3f5e73c26ac7cce398fc138f9a26c57462284aceec
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Darwin_x86_64.tar.gz
-    Darwin_x86_64: sha256:80e7012d5b99ce3c0062fae2f2f2097019532565c091001ce933a6f954f4479b
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Linux_arm.tar.gz
-    Linux_arm: sha256:224427a2f11ce146d9c3f875252a8a87040ad7aeccfbf88dd082abdeb0a9ebf3
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Linux_arm64.tar.gz
-    Linux_arm64: sha256:b0d2932396df691ff61093f9af03bca6b70bf3dbcd86e5d8e4a555d1ac2a472f
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Linux_x86_64.tar.gz
-    Linux_x86_64: sha256:d4471c3f5a3636ce9effc7e5c5d1ebeab44f11e828e4677e31a925cab90b66ae
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Windows_arm.tar.gz
-    Windows_arm: sha256:0a3cb38673e25180431a47cf016364a1ebb67a134f3349586b73b5e507101372
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Windows_arm64.tar.gz
-    Windows_arm64: sha256:2b280b26d15adece750e6d8e2176e2452f32badf750c93b4f89d4eec906ed9a9
-    # https://github.com/derailed/popeye/releases/download/v0.11.1/popeye_Windows_x86_64.tar.gz
-    Windows_x86_64: sha256:bd13f02fa4a6b7861baca7d38242e0a5d6b52a4073d5b4d6288db882f287f66b
+  # https://github.com/derailed/popeye/releases/download/v0.22.1/checksums.sha256
+  '0.22.1':
+    # https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_darwin_arm64.tar.gz
+    darwin_arm64: sha256:71dc8b8dc7d7cad60f9c377d4bb22a0ef5bac189c617951ebc20343f83a6704d
+    # https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_darwin_amd64.tar.gz
+    darwin_amd64: sha256:3dafce865dd778e2501ccbfd53fcbeecfc3244a43d4d1b02446064e39ac58d4e
+    # https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_linux_arm64.tar.gz
+    linux_arm64: sha256:5188b0b521966113580f0fef7769173af6303061dee10df247536f9bb55fe988
+    # https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_linux_amd64.tar.gz
+    linux_amd64: sha256:d58a3c0ba45805d452c32628320eecdcb5172fd5f42c82e12aeecc7a17eb930b
+    # https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_windows_arm64.tar.gz
+    windows_arm64: sha256:91aee5c13655f6fa509e79a87963ec0a81dd23486bb54a4845b3d0db33dabfb0
+    # https://github.com/derailed/popeye/releases/download/v0.22.1/popeye_windows_amd64.tar.gz
+    windows_amd64: sha256:fa5c155d65313e93985bdb7ed1a79fb0e310b7868848dfaf381ea081f349dacc
